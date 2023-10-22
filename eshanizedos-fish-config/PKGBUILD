@@ -6,8 +6,8 @@ pkgdesc="Fish Config For Eshanized OS"
 arch=('any')
 license=("GPL")
 depends=('fish' 'zoxide')
-$url="https://github.com/eshanizedos/$pkgname"
-source=('git+$url.git')
+$url="https://github.com/eshanizedos/eshanizedos-fish-config"
+source=("git+https://github.com/eshanizedos/eshanizedos-fish-config.git")
 
 package() {
   mkdir -p "${pkgdir}/etc/skel/.config"
