@@ -1,0 +1,26 @@
+# Maintainer: Eshan Aryan <src.eshan@gmail.com>
+
+pkgname=eshanizedos-calamares-sway
+_destname1="/etc"
+pkgver=1.r.
+pkgrel=1
+pkgdesc="Config files for Calamares for DTOS"
+arch=('any')
+url="https://github.com/eshanizedos/eshanizedos-calamares-sway"
+license=('GPL3')
+makedepends=('git')
+depends=()
+conflicts=()
+provides=("${pkgname}")
+options=(!strip !emptydirs)
+source=("git+$url")
+sha256sums=('SKIP')
+
+pkgver() {
+    printf "1.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+	install -dm755 ${pkgdir}${_destname1}
+	cp -r ${srcdir}/${pkgname}${_destname1}/* ${pkgdir}${_destname1}
+}
