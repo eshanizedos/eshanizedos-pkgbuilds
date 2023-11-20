@@ -1,7 +1,7 @@
 # Maintainer: Roman Perepelitsa <roman.perepelitsa@gmail.com>
 
 pkgname=zsh-theme-powerlevel10k-git
-pkgver=r4202.174ce9bf
+pkgver=r3918.25e5f59
 pkgrel=1
 pkgdesc='Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.'
 arch=('aarch64' 'i686' 'x86_64')
